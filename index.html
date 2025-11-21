@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Cloud Computing - Examen</title> 
+<style> 
+body { font-family: Arial; margin: 40px; } 
+.tabs { display: flex; margin-bottom: 20px; } 
+.tab { padding: 10px 20px; background: #764ba2; color: white; cursor: pointer; margin-right: 5px; } 
+.tab-content { display: none; padding: 20px; border: 1px solid #ccc; } 
+.active { display: block; } 
+.concept { margin-bottom: 20px; } 
+</style> 
+</head> 
+<body> 
+<h1>Examen Cloud Computing</h1> 
+<div class="tabs"> 
+<div class="tab" onclick="showTab(1)">Cloud Computing</div> 
+<div class="tab" onclick="showTab(2)">Herramientas Remotas</div> 
+</div> 
+<div id="tab1" class="tab-content active"> 
+<div class="concept"><h3>¨Qu‚ es Cloud Computing?</h3><p>Es la entrega de servicios de computaci¢n a trav‚s de Internet.</p></div> 
+<div class="concept"><h3>¨Qu‚ es SaaS, PaaS e IaaS?</h3><p><strong>SaaS:</strong> Software como Servicio</p><p><strong>PaaS:</strong> Plataforma como Servicio</p><p><strong>IaaS:</strong> Infraestructura como Servicio</p></div> 
+<div class="concept"><h3>¨Qu‚ es Virtualizaci¢n?</h3><p>Tecnolog¡a que permite crear versiones virtuales de recursos f¡sicos.</p></div> 
+<div class="concept"><h3>¨Qu‚ es Docker?</h3><p>Plataforma para desplegar aplicaciones en contenedores.</p></div> 
+</div> 
+<div id="tab2" class="tab-content"> 
+<div class="concept"><h3>AnyDesk</h3><p>Software de acceso remoto para controlar computadoras.</p></div> 
+<div class="concept"><h3>TeamViewer</h3><p>Herramienta para acceso remoto y reuniones en l¡nea.</p></div> 
+</div> 
+<script> 
+function showTab(tabNumber) { 
+document.getElementById('tab1').classList.remove('active'); 
+document.getElementById('tab2').classList.remove('active'); 
+document.getElementById('tab' + tabNumber).classList.add('active'); 
+} 
+</script> 
+</body> 
+</html> 
