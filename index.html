@@ -1,38 +1,208 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<title>Cloud Computing - Examen</title> 
-<style> 
-body { font-family: Arial; margin: 40px; } 
-.tabs { display: flex; margin-bottom: 20px; } 
-.tab { padding: 10px 20px; background: #764ba2; color: white; cursor: pointer; margin-right: 5px; } 
-.tab-content { display: none; padding: 20px; border: 1px solid #ccc; } 
-.active { display: block; } 
-.concept { margin-bottom: 20px; } 
-</style> 
-</head> 
-<body> 
-<h1>Examen Cloud Computing</h1> 
-<div class="tabs"> 
-<div class="tab" onclick="showTab(1)">Cloud Computing</div> 
-<div class="tab" onclick="showTab(2)">Herramientas Remotas</div> 
-</div> 
-<div id="tab1" class="tab-content active"> 
-<div class="concept"><h3>¨Qu‚ es Cloud Computing?</h3><p>Es la entrega de servicios de computaci¢n a trav‚s de Internet.</p></div> 
-<div class="concept"><h3>¨Qu‚ es SaaS, PaaS e IaaS?</h3><p><strong>SaaS:</strong> Software como Servicio</p><p><strong>PaaS:</strong> Plataforma como Servicio</p><p><strong>IaaS:</strong> Infraestructura como Servicio</p></div> 
-<div class="concept"><h3>¨Qu‚ es Virtualizaci¢n?</h3><p>Tecnolog¡a que permite crear versiones virtuales de recursos f¡sicos.</p></div> 
-<div class="concept"><h3>¨Qu‚ es Docker?</h3><p>Plataforma para desplegar aplicaciones en contenedores.</p></div> 
-</div> 
-<div id="tab2" class="tab-content"> 
-<div class="concept"><h3>AnyDesk</h3><p>Software de acceso remoto para controlar computadoras.</p></div> 
-<div class="concept"><h3>TeamViewer</h3><p>Herramienta para acceso remoto y reuniones en l¡nea.</p></div> 
-</div> 
-<script> 
-function showTab(tabNumber) { 
-document.getElementById('tab1').classList.remove('active'); 
-document.getElementById('tab2').classList.remove('active'); 
-document.getElementById('tab' + tabNumber).classList.add('active'); 
-} 
-</script> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing - Examen Práctico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .tabs {
+            display: flex;
+            background: #fff;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .tab {
+            flex: 1;
+            padding: 15px;
+            text-align: center;
+            background: #764ba2;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .tab:hover {
+            background: #667eea;
+        }
+        .tab.active {
+            background: #4a366a;
+        }
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 500px;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .concept {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .concept h3 {
+            color: #4a366a;
+            margin-bottom: 10px;
+        }
+        .concept p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .concept img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin: 10px 0;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .image-container img {
+            max-width: 400px;
+            border: 2px solid #ddd;
+        }
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tecnología Superior en Administración de Infraestructura y Plataformas Tecnológicas</h1>
+            <h2>Examen Interciclo - Cloud Computing</h2>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" onclick="openTab('tab1')">Cloud Computing & Virtualización</button>
+            <button class="tab" onclick="openTab('tab2')">Herramientas de Acceso Remoto</button>
+        </div>
+
+        <div id="tab1" class="tab-content active">
+            <div class="concept">
+                <h3>¿Qué es Cloud Computing?</h3>
+                <p>Cloud Computing es la entrega de servicios de computación a través de Internet, incluyendo servidores, almacenamiento, bases de datos, redes, software, análisis e inteligencia. Ofrece innovación más rápida, recursos flexibles y economías de escala.</p>
+                <div class="image-container">
+                    <img src="images/cloud-computing.jpg" alt="Cloud Computing">
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>¿Qué es SaaS, PaaS e IaaS?</h3>
+                <p><strong>SaaS (Software as a Service):</strong> Software distribuido por Internet bajo suscripción. Ejemplo: Google Workspace, Microsoft 365.</p>
+                <p><strong>PaaS (Platform as a Service):</strong> Plataforma para desarrollar y ejecutar aplicaciones sin gestionar la infraestructura. Ejemplo: Google App Engine, Heroku.</p>
+                <p><strong>IaaS (Infrastructure as a Service):</strong> Infraestructura informática fundamental bajo demanda. Ejemplo: AWS EC2, Google Compute Engine.</p>
+                <div class="image-container">
+                    <img src="images/saas-paas-iaas.jpg" alt="SaaS PaaS IaaS">
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>¿Qué es Virtualización?</h3>
+                <p>La virtualización es la tecnología que permite crear versiones virtuales de recursos físicos como servidores, almacenamiento y redes. Permite ejecutar múltiples sistemas operativos y aplicaciones en una misma máquina física.</p>
+                <div class="image-container">
+                    <img src="images/virtualizacion.jpg" alt="Virtualización">
+                </div>
+            </div>
+
+            <div class="concept">
+                <h3>¿Qué es Docker?</h3>
+                <p>Docker es una plataforma de código abierto que automatiza el despliegue de aplicaciones dentro de contenedores de software. Los contenedores permiten empaquetar una aplicación con todas sus dependencias y ejecutarla en cualquier entorno.</p>
+                <div class="image-container">
+                    <img src="images/docker.jpg" alt="Docker">
+                </div>
+            </div>
+        </div>
+
+        <div id="tab2" class="tab-content">
+            <div class="concept">
+                <h3>AnyDesk</h3>
+                <p>AnyDesk es una solución de acceso remoto que permite controlar computadoras de forma remota a través de Internet. Ofrece alta velocidad, seguridad y es utilizado para soporte técnico, teletrabajo y administración de sistemas.</p>
+                <div class="image-container">
+                    <img src="images/anydesk.jpg" alt="AnyDesk">
+                </div>
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>Conexiones rápidas y estables</li>
+                    <li>Alta seguridad con cifrado TLS 1.2</li>
+                    <li>Gratuito para uso personal</li>
+                    <li>Compatible con Windows, Mac, Linux, Android, iOS</li>
+                </ul>
+            </div>
+
+            <div class="concept">
+                <h3>TeamViewer</h3>
+                <p>TeamViewer es un software propietario para acceso remoto, compartir escritorio, reuniones en línea y transferencia de archivos entre computadoras. Es ampliamente utilizado para soporte técnico remoto y colaboración en equipo.</p>
+                <div class="image-container">
+                    <img src="images/teamviewer.jpg" alt="TeamViewer">
+                </div>
+                <p><strong>Características principales:</strong></p>
+                <ul>
+                    <li>Acceso remoto multiplataforma</li>
+                    <li>Reuniones y videoconferencias</li>
+                    <li>Transferencia de archivos</li>
+                    <li>App para dispositivos móviles</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            // Ocultar todos los contenidos de pestañas
+            var tabContents = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+
+            // Remover clase active de todos los botones
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove('active');
+            }
+
+            // Mostrar la pestaña seleccionada y activar el botón
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
